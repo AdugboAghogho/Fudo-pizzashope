@@ -67,7 +67,10 @@ const Hero = () => {
 
           <div className={css.details}>
             <span>Italian Pizza</span>
-            <span>$ 7.49k</span>
+            <span> 
+              <span style={{ color: 'var(--themeRed)' }}>$</span> 
+              7.49k
+            </span>
           </div>
         </div>
       </div>

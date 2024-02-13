@@ -29,7 +29,8 @@
 .menu>li:hover {
     cursor: pointer;
     color: var(--themeRed);
-    transition: ease 2s;
+    transition: ease 1s;
+    transform: scale(1.2);
     text-transform: bold;
 }
 
@@ -45,6 +46,9 @@
     display: flex;
     cursor: pointer;
     z-index: 99;
+}
+.cart:hover{
+    transform: scale(1.2);
 }
 
 .badge{
