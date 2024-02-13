@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import Cherry from '../assets/Cherry.png'
-import HeroImage from '../assets/HeroImage.png'
+import ww from '../assets/ww.png'
 import {UilPhone} from '@iconscout/react-unicons'
 import Pizza1 from '../assets/p1.jpg'
 import css from '../styles/Hero.module.css'
@@ -14,7 +14,7 @@ const Hero = () => {
           <span>More Than Faster</span>
           <Image 
             src={Cherry}
-            alt='cherry'
+            alt='cherrrgba(127, 218, 235, 0.986)'
             width={40}
             height={25}
           />
@@ -42,9 +42,10 @@ const Hero = () => {
       <div className={css.right}>
         <div className={css.imageContainer}>
           <Image 
-            src={HeroImage}
+            src={ww}
             alt='hero'
             layout='intrinsic'
+            priority
           />
         </div>
 
@@ -69,7 +70,7 @@ const Hero = () => {
             <span>Italian Pizza</span>
             <span> 
               <span style={{ color: 'var(--themeRed)' }}>$</span> 
-              7.49k
+              7.49
             </span>
           </div>
         </div>
