@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import Cherry from '../assets/Cherry.png'
+import HeroImage from '../assets/HeroImage.png'
 import css from '../styles/Hero.module.css'
 
 const Hero = () => {
@@ -16,27 +17,35 @@ const Hero = () => {
             height={25}
           />
         </div>
-      </div>
 
-      <div className={css.heroText}>
-        <span>Be The Fastest</span>
-        <span>In Delivering</span>
-        <span> 
-          Your <span style={{ color: 'var(--themeRed)'}}>Pizza</span>
+        <div className={css.heroText}>
+          <span>Be The Fastest</span>
+          <span>In Delivering</span>
+          <span> 
+            Your <span style={{ color: 'var(--themeRed)'}}>Pizza</span>
+          </span>
+        </div>
+
+        <span className={css.miniText}>
+          Our Mission is to Fill Your Tummy With Delicious Food and free Delivery
         </span>
+
+        <butoon className={`btn ${css.btn}`}>
+          Get Started
+        </butoon>
       </div>
 
-      <span className={css.miniText}>
-        Our Mission is to Fill Your Tummy With Delicious Food and free Delivery
-      </span>
+      {/* Right side */}
 
-      <butoon className="btn">
-        Get Started
-      </butoon>
-
-
-
-      .{css.right}
+      <div className={css.right}>
+        <div className={css.imageContainer}>
+          <Image 
+            src={HeroImage}
+            alt='hero'
+            layout='intrinsic'
+          />
+        </div>
+      </div>
     </div>
   )
 }
