@@ -2,6 +2,8 @@ import Image from 'next/image'
 import React from 'react'
 import Cherry from '../assets/Cherry.png'
 import HeroImage from '../assets/HeroImage.png'
+import {UilPhone} from '@iconscout/react-unicons'
+import Pizza1 from '../assets/p1.jpg'
 import css from '../styles/Hero.module.css'
 
 const Hero = () => {
@@ -44,6 +46,29 @@ const Hero = () => {
             alt='hero'
             layout='intrinsic'
           />
+        </div>
+
+        <div className={css.ContactUs}>
+          <span>Contact Us</span>
+          <div>
+            <UilPhone color='white'/>
+          </div>
+        </div>
+
+        <div className={css.Pizza}>
+          <div>
+            <Image
+              src={Pizza1}
+              alt='pizza'
+              objectFit='cover'
+              layout='intrinsic'
+            />
+          </div>
+
+          <div className={css.details}>
+            <span>Italian Pizza</span>
+            <span>$ 7.49k</span>
+          </div>
         </div>
       </div>
     </div>

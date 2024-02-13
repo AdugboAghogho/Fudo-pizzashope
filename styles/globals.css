@@ -63,3 +63,7 @@ a {
   cursor: pointer;
   background-color: var(--themeRed);
 }
+.btn:hover{
+  transform: scale(1.1);
+  background-color: #070631;
+}

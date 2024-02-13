@@ -39,3 +39,45 @@
 .btn{
     padding: 1rem 2.5rem;
 }
+
+.right{
+    position: relative;
+}
+
+.imageContainer{
+    width: 38rem;
+    position: absolute;
+    top: -5rem;
+    left: -5rem;
+}
+
+.ContactUs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: max-content;
+    padding: 1rem;
+    border-radius: 5rem;
+    top: 6rem;
+    left: -6rem;
+    gap: 1rem;
+    background-color: white;
+    box-shadow: var(--shadow);
+    color: var(--themeRed);
+}
+
+.ContactUs>div{
+    background: rgb(59, 208, 59);
+    border-radius: 50%;
+    width: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+}
+
+.ContactUs:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
