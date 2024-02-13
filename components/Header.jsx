@@ -13,6 +13,7 @@ const Header = () => {
           alt='logo'
           width={50}
           height={50}
+          className='img'
         />
         <span>Fudo</span>
       </div>
