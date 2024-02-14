@@ -53,7 +53,7 @@ const Services = () => {
                 />
             </div>
 
-            <span>Easy to Order</span>
+            <span>Good Qulity</span>
             <span>Not Only Fast For Us, Qulity Is also Number One</span>
         </div>
       </div>
