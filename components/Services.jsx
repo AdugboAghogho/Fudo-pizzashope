@@ -39,8 +39,8 @@ const Services = () => {
                 />
             </div>
 
-            <span>Easy to Order</span>
-            <span>You only need a few Steps in Food Ordering</span>
+            <span>Fast Delivery</span>
+            <span>Delivery that is always on time even faster</span>
         </div>
 
         <div className={css.feature}>
@@ -54,7 +54,7 @@ const Services = () => {
             </div>
 
             <span>Easy to Order</span>
-            <span>You only need a few Steps in Food Ordering</span>
+            <span>Not Only Fast For Us, Qulity Is also Number One</span>
         </div>
       </div>
     </>
