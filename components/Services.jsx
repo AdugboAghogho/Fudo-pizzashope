@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 const Services = () => {
   return (
-    <>
+    <> 
       <div className={css.heading}>
         <span>WHAT WE SERVE</span>
         <span>Your Favourite Food</span>
