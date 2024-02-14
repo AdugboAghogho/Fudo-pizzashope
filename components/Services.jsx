@@ -5,7 +5,7 @@ const Services = () => {
   return (
     <>
       <div className={css.heading}>
-        <span>What WE Serve</span>
+        <span>WHAT WE SERVE</span>
         <span>Your Favourite Foof</span>
         <span>Delivery Partner</span>
       </div>
