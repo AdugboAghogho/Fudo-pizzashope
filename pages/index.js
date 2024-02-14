@@ -2,6 +2,7 @@ import Head from "next/head";
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 import css from '../styles/Home.module.css'
+import Services from "../components/Services";
 
 export default function Home() {
   return (
@@ -14,7 +15,8 @@ export default function Home() {
         </Head>
         {/* body */}
         <main>
-          <Hero />      
+          <Hero />  
+          <Services />    
         </main>
       </div>
     </Layout>
