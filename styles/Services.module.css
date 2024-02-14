@@ -4,6 +4,7 @@
     font-weight: bold;
     justify-content: center;
     align-items: center;
+    margin-top: 5rem;
 }
 
 .heading>:nth-child(1) {

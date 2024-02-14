@@ -10,7 +10,7 @@ const Services = () => {
     <>
       <div className={css.heading}>
         <span>WHAT WE SERVE</span>
-        <span>Your Favourite Foof</span>
+        <span>Your Favourite Food</span>
         <span>Delivery Partner</span>
       </div>
 
