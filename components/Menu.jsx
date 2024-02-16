@@ -1,9 +1,14 @@
 import React from 'react'
+import css from '../styles/Menu.module.css'
 
-const Menu = () => {
+const Menu = ({ pizzas }) => {
   return (
-    <div>
-      
+    <div className={css.container}>
+      <div className={css.heading}>
+        <span>OUR MENU</span>
+        <span>Menu That Always</span>
+        <span>Makes You Fall In Love</span>
+      </div>
     </div>
   )
 }
