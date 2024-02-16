@@ -21,3 +21,11 @@
 .heading>:nth-child(2), .heading>:nth-child(3) {
     font-size: 2rem;
 }
+
+.ImageWrapper{
+    height: 16rem;
+    width: 22rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2rem;
+}
