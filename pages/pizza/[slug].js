@@ -3,6 +3,8 @@ import Layout from './../../components/Layout';
 import { client, urlFor } from '../../components/lib/client';
 import Image from 'next/image';
 import css from '../../styles/Pizza.module.css'
+import LeftArrow from '../../assets/arrowLeft'
+import LeftArrow from '../../assets/arrowRight'
 
 export default function pizza ({ pizza }) {
   const src = urlFor(pizza.image).url()
@@ -37,6 +39,12 @@ export default function pizza ({ pizza }) {
 
                 <div className={css.quantity}>
                     <span>Quantity</span>
+
+                    <div className={css.counter}>
+                        <Image
+                           src={LeftArrow}
+                        />
+                    </div>
                 </div>
             </div>
        </div>
