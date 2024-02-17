@@ -11,29 +11,36 @@ export default function pizza ({ pizza }) {
     <Layout>
       <div className={css.container}>
         <div className={css.imageWrapper}>
-            <Image
-              loader={() => src}
-              alt=''
-              src={src}
-              layout='fill'
-              unoptimized
-              objectFit='cover '
-            />
-        </div>
-      </div>
-
-      <div className={css.size}>
-            <span>Size</span>
-            <div className={css.SizeVaraints}>
-                <div>Small</div>
-                <div>Medium</div>
-                <div>Large</div>
+                <Image
+                loader={() => src}
+                alt=''
+                src={src}
+                layout='fill'
+                unoptimized
+                objectFit='cover '
+                />
             </div>
-      </div>
 
-      <div className={css.quantity}>
-        <span>Quantity</span>
-      </div>
+            <div className={css.right}>
+                <span>{pizza.name}</span>
+                <span>{pizza.details}</span>
+
+                <span></span>
+                <div className={css.size}>
+                    <span>Size</span>
+                    <div className={css.sizeVaraints}>
+                        <div>Small</div>
+                        <div>Medium</div>
+                        <div>Large</div>
+                    </div>
+                </div>
+
+                <div className={css.quantity}>
+                    <span>Quantity</span>
+                </div>
+            </div>
+       </div>
+
     </Layout>
   )
 }
