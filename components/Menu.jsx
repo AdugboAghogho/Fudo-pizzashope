@@ -12,23 +12,29 @@ const Menu = ({ pizzas }) => {
         <span>Makes You Fall In Love</span>
       </div>
 
-      {pizzas.map((pizza, id) =>  {
-            const src = urlFor(pizza.image).url()
+      <div className={css.menu}>
+        {pizzas.map((pizza, id) =>  {
+          const src = urlFor(pizza.image).url()
 
-            return (
-                <div className={css.pizza} key={id}>
-                    <div className={css.ImageWrapper}>
-                        <Image 
-                        loader={() => src}
-                        src={src}
-                        alt='pizza'
-                        objectFit='cover'
-                        layout='fill'
-                        />
-                    </div>
-                </div>
-            )
-       })}
+          return (
+            <div className={css.pizza} key={id}>
+              <div className={css.ImageWrapper}>
+                <Image 
+                loader={() => src}
+                src={src}
+                alt='pizza'
+                objectFit='cover'
+                layout='fill'
+                />
+              </div>
+
+              <span>{pizza.name}</span>
+              <span>$ {pizza.price[1]}</span>
+            </div>
+          )
+        })}
+
+      </div>
     </div>
   )
 }
