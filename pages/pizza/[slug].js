@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Layout from './../../components/Layout';
 import { client, urlFor } from '../../components/lib/client';
 import Image from 'next/image';
@@ -8,6 +8,8 @@ import arrowRight from '../../assets/arrowRight.png'
 
 export default function pizza ({ pizza }) {
   const src = urlFor(pizza.image).url()
+
+  const [size, setSize] = useState(1)
 
   return (
     <Layout>
@@ -31,9 +33,9 @@ export default function pizza ({ pizza }) {
                 <div className={css.size}>
                     <span>Size</span>
                     <div className={css.sizeVaraints}>
-                        <div>Small</div>
-                        <div>Medium</div>
-                        <div>Large</div>
+                        <div onClick={() => setSize(0)}>Small</div>
+                        <div onClick={() => setSize(1)}>Medium</div>
+                        <div onClick={() => setSize(2)}>Large</div>
                     </div>
                 </div>
 
@@ -59,6 +61,10 @@ export default function pizza ({ pizza }) {
                            objectFit='contain'
                         />
                     </div>
+                </div>
+
+                <div className={`btn ${css.btn}`}>
+                    Add To Cart
                 </div>
             </div>
        </div>

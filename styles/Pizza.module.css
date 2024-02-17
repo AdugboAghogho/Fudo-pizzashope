@@ -80,3 +80,9 @@
     display: flex;
     gap: 1rem;
 }
+
+.btn{
+    font-weight: normal;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
