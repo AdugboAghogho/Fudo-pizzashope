@@ -68,3 +68,15 @@
     transform: scale(1.2);
     cursor: pointer;
 }
+
+.quantity{
+    display: flex;
+    font-size: 1.6rem;
+    font-weight: 600;
+    gap: 3rem;
+}
+
+.counter{
+    display: flex;
+    gap: 1rem;
+}

@@ -3,8 +3,8 @@ import Layout from './../../components/Layout';
 import { client, urlFor } from '../../components/lib/client';
 import Image from 'next/image';
 import css from '../../styles/Pizza.module.css'
-import LeftArrow from '../../assets/arrowLeft'
-import LeftArrow from '../../assets/arrowRight'
+import arrowLeft from '../../assets/arrowLeft.png'
+import arrowRight from '../../assets/arrowRight.png'
 
 export default function pizza ({ pizza }) {
   const src = urlFor(pizza.image).url()
@@ -42,7 +42,21 @@ export default function pizza ({ pizza }) {
 
                     <div className={css.counter}>
                         <Image
-                           src={LeftArrow}
+                           src={arrowLeft}
+                           alt=''
+                           height={20}
+                           width={20}
+                           objectFit='contain'
+                        />
+
+                        <span>1</span>
+
+                        <Image
+                           src={arrowRight}
+                           alt=''
+                           height={20}
+                           width={20}
+                           objectFit='contain'
                         />
                     </div>
                 </div>
