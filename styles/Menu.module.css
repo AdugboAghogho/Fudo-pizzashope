@@ -30,6 +30,7 @@
     align-items: center;
     justify-content: space-around;
 }
+
 .bg{
     display: flex;
     align-items: flex-start;
@@ -39,6 +40,7 @@
     width: 20rem;
     height: 23rem;
     padding-top: 1rem;
+    gap: 2rem;
 }
 .bg:hover{
     background: #fff;

@@ -27,20 +27,20 @@ export default function pizza ({ pizza }) {
 
 export async function getStaticPaths() {
     const paths = await client.fetch(
-        `*[_type=="pizza" && define(slug.current)][].slug.current`
+        `*[_type=="pizza" && defined(slug.current)][].slug.current`
     );
 
     return {
-        paths: paths.map((slug) => ({params: {slug}})),
+        paths: paths.map((slug) => ({params: { slug } })),
         fallback: 'blocking'
     }
 }
 
 
-export async function getStaticPaths(context){
+export async function getStaticProps(context) {
     const { slug = ""} = context.params;
     const pizza = await client.fetch(
-        `*[_type=="pizza" && slug.current == ${slug}][0]`
+        `*[_type=="pizza" && slug.current == '${slug}'][0]`
     );
 
     return {
