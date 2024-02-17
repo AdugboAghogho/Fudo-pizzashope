@@ -10,6 +10,7 @@
     flex-direction: column;
     font-weight: bold;
     justify-content: flex-start;
+    animation-name: flip;
 }
 
 .heading>:nth-child(1) {
@@ -33,18 +34,19 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    background: linear-gradient(rgba(0, 0, 128, 0.336), blue);
+    background: #82c2fd;
     border-radius: 2rem 1rem;
     width: 20rem;
     height: 23rem;
     padding-top: 1rem;
 }
 .bg:hover{
-    background-color: #fff;
+    background: #fff;
 }
 
 .pizza{
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;

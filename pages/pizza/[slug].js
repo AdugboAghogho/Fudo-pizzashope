@@ -13,5 +13,5 @@ export default function pizza ({ pizza }) {
 export async function getStaticPaths() {
     const paths = await client.fetch(
         `*[_type=="pizza" && define(slug.current)][].slug.current`
-    )
+    );
 }
