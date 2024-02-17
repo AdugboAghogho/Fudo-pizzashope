@@ -14,4 +14,9 @@ export async function getStaticPaths() {
     const paths = await client.fetch(
         `*[_type=="pizza" && define(slug.current)][].slug.current`
     );
+
+    return {
+        paths: paths.map((slug) => ({params: {slug}})),
+        fallback: 'blocking'
+    }
 }
