@@ -29,6 +29,16 @@
     align-items: center;
     justify-content: space-around;
 }
+.bg{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: brown;
+    border-radius: 2rem 1rem;
+    width: 20rem;
+    height: 23rem;
+    padding-top: 1rem;
+}
 
 .pizza{
     display: flex;
@@ -38,17 +48,22 @@
     gap: 0.5rem;
     font-size: 1.5rem;
     font-weight: bold;
+   
+
 }
 .pizza:hover{
-    cursor: link;
+    cursor: pointer;
 }
 
 .ImageWrapper{
+    display: flex;
+    justify-content: center;
     height: 16rem;
-    width: 22rem;
+    width: 18rem;
     position: relative;
     overflow: hidden;
-    border-radius: 2rem;
+    border-radius: 2rem 1rem;
+
 }
 
 .ImageWrapper>span>img:hover{
