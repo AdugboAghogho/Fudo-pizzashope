@@ -21,6 +21,19 @@ export default function pizza ({ pizza }) {
             />
         </div>
       </div>
+
+      <div className={css.size}>
+            <span>Size</span>
+            <div className={css.SizeVaraints}>
+                <div>Small</div>
+                <div>Medium</div>
+                <div>Large</div>
+            </div>
+      </div>
+
+      <div className={css.quantity}>
+        <span>Quantity</span>
+      </div>
     </Layout>
   )
 }
