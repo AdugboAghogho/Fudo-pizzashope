@@ -29,7 +29,10 @@ const Menu = ({ pizzas }) => {
               </div>
 
               <span>{pizza.name}</span>
-              <span>$ {pizza.price[1]}</span>
+              <span>
+                <span>$</span> 
+                {pizza.price[1]}
+              </span>
             </div>
           )
         })}
