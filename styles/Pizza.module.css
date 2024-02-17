@@ -86,3 +86,11 @@
     padding: 0.5rem 1rem;
     font-size: 1rem;
 }
+
+.selected{
+    background: var(--themeRed);
+    color: #fff;
+    transition: ease 2s;
+    transform: scale(1.2);
+    cursor: pointer;
+}

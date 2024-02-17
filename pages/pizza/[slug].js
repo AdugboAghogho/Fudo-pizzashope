@@ -33,9 +33,9 @@ export default function pizza ({ pizza }) {
                 <div className={css.size}>
                     <span>Size</span>
                     <div className={css.sizeVaraints}>
-                        <div onClick={() => setSize(0)}>Small</div>
-                        <div onClick={() => setSize(1)}>Medium</div>
-                        <div onClick={() => setSize(2)}>Large</div>
+                        <div className={Size === 0 ? css.selected : ''} onClick={() => setSize(0)}>Small</div>
+                        <div className={Size === 1 ? css.selected : ''} onClick={() => setSize(1)}>Medium</div>
+                        <div className={Size === 2 ? css.selected : ''} onClick={() => setSize(2)}>Large</div>
                     </div>
                 </div>
 
