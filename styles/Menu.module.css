@@ -44,6 +44,7 @@
 }
 .bg:hover{
     background: #fff;
+    transition: ease 1s;
 }
 
 .pizza{
@@ -75,4 +76,5 @@
 
 .ImageWrapper>span>img:hover{
     transform: scale(1.1);
+    filter: saturate(0);
 }
