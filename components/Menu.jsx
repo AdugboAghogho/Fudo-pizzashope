@@ -2,6 +2,7 @@ import React from 'react'
 import css from '../styles/Menu.module.css'
 import Image from 'next/image'
 import { urlFor } from './lib/client'
+import Link from 'next/link'
 
 const Menu = ({ pizzas }) => {
   return (
@@ -18,15 +19,19 @@ const Menu = ({ pizzas }) => {
 
           return (
             <div className={css.pizza} key={id}>
-              <div className={css.ImageWrapper}>
-                <Image 
-                loader={() => src}
-                src={src}
-                alt='pizza'
-                objectFit='cover'
-                layout='fill'
-                />
-              </div>
+
+              <Link href={`./pizza/${pizza.slug.current}`}>
+                <div className={css.ImageWrapper}>
+                  <Image 
+                  loader={() => src}
+                  src={src}
+                  alt='pizza'
+                  objectFit='cover'
+                  layout='fill'
+                  />
+                </div>
+
+              </Link>
 
               <span>{pizza.name}</span>
               <span>
