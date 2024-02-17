@@ -39,6 +39,9 @@
     font-size: 1.5rem;
     font-weight: bold;
 }
+.pizza:hover{
+    cursor: link;
+}
 
 .ImageWrapper{
     height: 16rem;
@@ -48,6 +51,6 @@
     border-radius: 2rem;
 }
 
-.imageContainer>span>img:hover{
+.ImageWrapper>span>img:hover{
     transform: scale(1.1);
 }
