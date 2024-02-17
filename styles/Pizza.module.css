@@ -3,10 +3,10 @@
     padding: 2rem;
     gap: 5rem;
     margin-top: 3rem;
-    background: rgba(110, 224, 177, 0.788);
+    /* background: rgba(110, 224, 177, 0.788);
     border-radius: 2rem;
     height: 40rem;
-    width: 100rem;
+    width: 100rem; */
 
 
 }
@@ -45,7 +45,7 @@
     font-size: 1.6rem;
 }
 
-.sizeVariants{
+.sizeVaraints{
     display: flex;
     gap: 0.6rem;
     font-weight: normal;
@@ -53,11 +53,17 @@
     font-size: 0.8rem;
 }
 
-.sizeVariants>div{
+.sizeVaraints >div{
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0.3rem 1.5rem;
     border: 2px solid var(--themeRed);
     border-radius: 2rem;
+}
+.sizeVaraints >div:hover{
+    background: var(--themeRed);
+    color: #fff;
+    transition: ease 2s;
+    transform: scale(1.2);
 }

@@ -22,10 +22,10 @@ export default function pizza ({ pizza }) {
             </div>
 
             <div className={css.right}>
-                <span>{pizza.name}</span>
+                <span >{pizza.name}</span>
                 <span>{pizza.details}</span>
 
-                <span></span>
+                <span> <span style={{ color: 'var(--themeRed)'}}>$</span> {pizza.price[1]}</span>
                 <div className={css.size}>
                     <span>Size</span>
                     <div className={css.sizeVaraints}>
