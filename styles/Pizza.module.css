@@ -66,4 +66,5 @@
     color: #fff;
     transition: ease 2s;
     transform: scale(1.2);
+    cursor: pointer;
 }
