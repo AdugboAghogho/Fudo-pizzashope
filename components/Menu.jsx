@@ -30,7 +30,7 @@ const Menu = ({ pizzas }) => {
 
               <span>{pizza.name}</span>
               <span>
-                <span>$</span> 
+                <span style={{ color: 'var(--themeRed)'}}>$</span> 
                 {pizza.price[1]}
               </span>
             </div>

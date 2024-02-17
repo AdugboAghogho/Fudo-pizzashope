@@ -30,10 +30,24 @@
     justify-content: space-around;
 }
 
+.pizza{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 .ImageWrapper{
     height: 16rem;
     width: 22rem;
     position: relative;
     overflow: hidden;
     border-radius: 2rem;
+}
+
+.imageContainer>span>img:hover{
+    transform: scale(1.1);
 }
