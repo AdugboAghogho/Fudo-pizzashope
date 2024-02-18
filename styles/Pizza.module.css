@@ -80,6 +80,10 @@
     display: flex;
     gap: 1rem;
 }
+.counter >:nth-child(1), .counter >:nth-child(3){
+    cursor: pointer;
+    transform: scale(1.1);
+}
 
 .btn{
     font-weight: normal;

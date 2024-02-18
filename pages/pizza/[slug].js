@@ -13,7 +13,11 @@ export default function pizza ({ pizza }) {
   const [Quantity, setQuantity] = useState(1)
 
   const handleQuan = (type) => {
-    mn
+    type === 'inc'
+    ? setQuantity((prev) => prev + 1) 
+    : Quantity === 1 
+    ? null 
+    : setQuantity ((prev) => prev -1)
   }
 
   return (
@@ -54,10 +58,10 @@ export default function pizza ({ pizza }) {
                            height={20}
                            width={20}
                            objectFit='contain'
-                           onClick={handleQuan("dec")}
+                           onClick={() => handleQuan("dec")}
                         />
 
-                        <span>1</span>
+                        <span>{Quantity}</span>
 
                         <Image
                            src={arrowRight}
@@ -65,7 +69,7 @@ export default function pizza ({ pizza }) {
                            height={20}
                            width={20}
                            objectFit='contain'
-                           onClick={handleQuan("add")}
+                           onClick={() => handleQuan("inc")}
                         />
                     </div>
                 </div>
