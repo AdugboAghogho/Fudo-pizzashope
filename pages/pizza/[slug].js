@@ -23,63 +23,60 @@ export default function pizza ({ pizza }) {
   return (
     <Layout>
        <div className={css.container}>
-            <div className={css.hoo}>
-                <div className={css.imageWrapper}>
-                    <Image
-                    loader={() => src}
-                    alt=''
-                    src={src}
-                    layout='fill'
-                    unoptimized
-                    objectFit='cover '
-                    />
-                </div>
+           <div className={css.imageWrapper}>
+                <Image
+                loader={() => src}
+                alt=''
+                src={src}
+                layout='fill'
+                unoptimized
+                objectFit='cover '
+                />
+            </div>
 
-                <div className={css.right}>
-                    <span >{pizza.name}</span>
-                    <span>{pizza.details}</span>
+            <div className={css.right}>
+                <span >{pizza.name}</span>
+                <span>{pizza.details}</span>
 
-                    <span> <span style={{ color: 'var(--themeRed)'}}>$</span> {pizza.price[Size]}</span>
-                    <div className={css.size}>
-                        <span>Size</span>
-                        <div className={css.sizeVaraints}>
-                            <div className={Size === 0 ? css.selected : ''} onClick={() => setSize(0)}>Small</div>
-                            <div className={Size === 1 ? css.selected : ''} onClick={() => setSize(1)}>Medium</div>
-                            <div className={Size === 2 ? css.selected : ''} onClick={() => setSize(2)}>Large</div>
-                        </div>
-                    </div>
-
-                    <div className={css.quantity}>
-                        <span>Quantity</span>
-
-                        <div className={css.counter}>
-                            <Image
-                                src={arrowLeft}
-                                alt=''
-                                height={20}
-                                width={20}
-                                objectFit='contain'
-                                onClick={() => handleQuan("dec")}
-                            />
-
-                            <span>{Quantity}</span>
-
-                            <Image
-                                src={arrowRight}
-                                alt=''
-                                height={20}
-                                width={20}
-                                objectFit='contain'
-                                onClick={() => handleQuan("inc")}
-                            />
-                        </div>
-                    </div>
-
-                    <div className={`btn ${css.btn}`}>
-                        Add To Cart
+                <span> <span style={{ color: 'var(--themeRed)'}}>$</span> {pizza.price[Size]}</span>
+                <div className={css.size}>
+                    <span>Size</span>
+                    <div className={css.sizeVaraints}>
+                        <div className={Size === 0 ? css.selected : ''} onClick={() => setSize(0)}>Small</div>
+                        <div className={Size === 1 ? css.selected : ''} onClick={() => setSize(1)}>Medium</div>
+                        <div className={Size === 2 ? css.selected : ''} onClick={() => setSize(2)}>Large</div>
                     </div>
                 </div>
-                
+
+                <div className={css.quantity}>
+                    <span>Quantity</span>
+
+                    <div className={css.counter}>
+                        <Image
+                           src={arrowLeft}
+                           alt=''
+                           height={20}
+                           width={20}
+                           objectFit='contain'
+                           onClick={() => handleQuan("dec")}
+                        />
+
+                        <span>{Quantity}</span>
+
+                        <Image
+                           src={arrowRight}
+                           alt=''
+                           height={20}
+                           width={20}
+                           objectFit='contain'
+                           onClick={() => handleQuan("inc")}
+                        />
+                    </div>
+                </div>
+
+                <div className={`btn ${css.btn}`}>
+                    Add To Cart
+                </div>
             </div>
        </div>
 
