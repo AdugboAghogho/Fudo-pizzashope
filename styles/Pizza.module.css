@@ -47,7 +47,7 @@
 
 .sizeVaraints{
     display: flex;
-    gap: 0.6rem;
+    gap: 0.9rem;
     font-weight: normal;
     color: var(--themeRed);
     font-size: 0.8rem;

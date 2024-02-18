@@ -67,6 +67,6 @@ a {
 .btn:hover{
   transform: scale(1.1);
   background-color: #070631;
-  transition: ease 3s;
+  transition: ease 1s;
 }
 

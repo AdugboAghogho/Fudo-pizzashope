@@ -13,7 +13,7 @@ export default function pizza ({ pizza }) {
   const [Quantity, setQuantity] = useState(1)
 
   const handleQuan = (type) => {
-    ,
+    mn
   }
 
   return (
