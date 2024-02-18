@@ -9,7 +9,12 @@ import arrowRight from '../../assets/arrowRight.png'
 export default function pizza ({ pizza }) {
   const src = urlFor(pizza.image).url()
 
-  const [size, setSize] = useState(1)
+  const [Size, setSize] = useState(1)
+  const [Quantity, setQuantity] = useState(1)
+
+  const handleQuan = (type) => {
+    ,
+  }
 
   return (
     <Layout>
@@ -29,7 +34,7 @@ export default function pizza ({ pizza }) {
                 <span >{pizza.name}</span>
                 <span>{pizza.details}</span>
 
-                <span> <span style={{ color: 'var(--themeRed)'}}>$</span> {pizza.price[1]}</span>
+                <span> <span style={{ color: 'var(--themeRed)'}}>$</span> {pizza.price[Size]}</span>
                 <div className={css.size}>
                     <span>Size</span>
                     <div className={css.sizeVaraints}>
@@ -49,6 +54,7 @@ export default function pizza ({ pizza }) {
                            height={20}
                            width={20}
                            objectFit='contain'
+                           onClick={handleQuan("dec")}
                         />
 
                         <span>1</span>
@@ -59,6 +65,7 @@ export default function pizza ({ pizza }) {
                            height={20}
                            width={20}
                            objectFit='contain'
+                           onClick={handleQuan("add")}
                         />
                     </div>
                 </div>
