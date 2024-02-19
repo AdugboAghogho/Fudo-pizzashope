@@ -29,6 +29,7 @@
 
 .heroText{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     font-size: 4rem;
     font-weight: bold;
