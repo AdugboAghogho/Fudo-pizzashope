@@ -8,18 +8,16 @@ import { Link } from 'next/link';
 const Header = () => {
   return (
     <div className={css.header}>
-      
-        <div className={css.logo}>
-          <Image 
-            src={Logo}
-            alt='logo'
-            width={50}
-            height={50}
-            className='img'
-          />
-          <span>Fudo</span>
-        </div>
-      
+      <div className={css.logo}>
+        <Image 
+          src={Logo}
+          alt='logo'
+          width={50}
+          height={50}
+          className='img'
+        />
+        <span>Fudo</span>
+      </div>
 
       <ul className={css.menu}>
         <li>Home</li>

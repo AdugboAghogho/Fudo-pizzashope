@@ -22,6 +22,9 @@
     color: var(--themeRed);
     font-weight: bold;
 }
+.cherryDiv:hover{
+    transform: scale(1.1);
+}
 
 .heroText{
     display: flex;
