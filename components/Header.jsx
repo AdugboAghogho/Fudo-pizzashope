@@ -8,7 +8,7 @@ import { Link } from 'next/link';
 const Header = () => {
   return (
     <div className={css.header}>
-      <Link href={`./pizza/${pizza.slug.current}`}>
+      
         <div className={css.logo}>
           <Image 
             src={Logo}
@@ -19,7 +19,7 @@ const Header = () => {
           />
           <span>Fudo</span>
         </div>
-      </Link>
+      
 
       <ul className={css.menu}>
         <li>Home</li>
