@@ -12,7 +12,7 @@
     gap: 0.5rem;
     flex: 1;
 }
-.logo>:nth-child(1), .logo>:nth-child(2):hover{
+.logo>:hover{
     cursor: pointer;
     transform: scale(1.1);
 }
