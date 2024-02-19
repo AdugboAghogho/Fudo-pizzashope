@@ -3,18 +3,21 @@ import css from '../styles/Header.module.css'
 import Image from 'next/image'
 import Logo from '../assets/Logo.png'
 import { UilShoppingBag } from '@iconscout/react-unicons'
+import { Link } from 'next/link';
 
 const Header = () => {
   return (
     <div className={css.header}>
       <div className={css.logo}>
-        <Image 
-          src={Logo}
-          alt='logo'
-          width={50}
-          height={50}
-          className='img'
-        />
+        <Link >
+          <Image 
+            src={Logo}
+            alt='logo'
+            width={50}
+            height={50}
+            className='img'
+          />
+        </Link>
         <span>Fudo</span>
       </div>
 
