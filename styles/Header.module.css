@@ -68,3 +68,57 @@
     align-items: center;
     right: -0.5rem;
 }
+
+
+
+/*======================= SMALL SCREEN =========================*/
+.app__navbarsmallscreen {
+    display: none;
+}
+
+.app__navbarsmallscreen_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--color-black);
+    transition: 0.5s ease;
+
+    flex-direction: column;
+    z-index: 5;
+}
+
+.app__navbarsmallscreen_overlay .overlay__close {
+    font-size: 27px;
+    color: var(--color-golden);
+    cursor: pointer;
+
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.app__navbarsmallscreen_links{
+    list-style: none;
+}
+
+.app__navbarsmallscreen_links li{
+    margin: 2rem;
+    cursor: pointer;
+    color: var(--color-golden);
+    font-size: 2rem;
+    text-align: center;
+    font-family: var(--font-base);
+}
+
+.app__navbarsmallscreen_links li:hover {
+    color: var(--color-white);
+    border-bottom: 3px solid var(--color-grey);
+}
+
+@media screen and (max-width: 1150px) {
+    .app__navbarsmallscreen {
+        display: flex;
+    }
+}

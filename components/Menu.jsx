@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const Menu = ({ pizzas }) => {
   return (
-    <div className={css.container}>
+    <div className={css.container} id='menu'>
       <div className={css.heading}>
         <span>OUR MENU</span>
         <span>Menu That Always</span>

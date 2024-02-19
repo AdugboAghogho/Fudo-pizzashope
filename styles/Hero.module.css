@@ -117,3 +117,19 @@
 .Pizza:hover{
     transform: scale(1.2);
 }
+
+@media screen and (max-width: 375px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .imageContainer {
+      margin: 5rem 0 0 0;
+    }
+  
+
+  
+    .imageContainer>Image {
+      width: 100%;
+    }
+}

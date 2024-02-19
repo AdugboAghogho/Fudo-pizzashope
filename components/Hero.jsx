@@ -8,7 +8,7 @@ import css from '../styles/Hero.module.css'
 
 const Hero = () => {
   return (
-    <div className={css.container}>
+    <div className={css.container} id='home'>
       <div className={css.left}>
         <div className={css.cherryDiv}>
           <span>More Than Faster</span>
