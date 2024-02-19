@@ -8,8 +8,8 @@ import { Link } from 'next/link';
 const Header = () => {
   return (
     <div className={css.header}>
-      <div className={css.logo}>
-        <Link >
+      <Link href={`./pizza/${pizza.slug.current}`}>
+        <div className={css.logo}>
           <Image 
             src={Logo}
             alt='logo'
@@ -17,9 +17,9 @@ const Header = () => {
             height={50}
             className='img'
           />
-        </Link>
-        <span>Fudo</span>
-      </div>
+          <span>Fudo</span>
+        </div>
+      </Link>
 
       <ul className={css.menu}>
         <li>Home</li>
