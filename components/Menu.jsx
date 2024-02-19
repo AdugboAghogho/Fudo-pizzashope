@@ -18,9 +18,9 @@ const Menu = ({ pizzas }) => {
           const src = urlFor(pizza.image).url()
 
           return (
-                <Link href={`./pizza/${pizza.slug.current}`}>
-            <div className={css.bg}>
-              <div className={css.pizza} key={id}>
+            <Link href={`./pizza/${pizza.slug.current}`}>
+              <div className={css.bg}>
+                <div className={css.pizza} key={id}>
 
                   <div className={css.ImageWrapper}>
                     <Image 
@@ -33,15 +33,15 @@ const Menu = ({ pizzas }) => {
                   </div>
 
 
-                <span>{pizza.name}</span>
-                <span>
-                  <span style={{ color: 'var(--themeRed)'}}>$</span> 
-                  {pizza.price[1]}
-                </span>
-              </div>
+                  <span>{pizza.name}</span>
+                  <span>
+                    <span style={{ color: 'var(--themeRed)'}}>$</span> 
+                    {pizza.price[1]}
+                  </span>
+                </div>
 
-            </div>
-                </Link>
+              </div>
+            </Link>
 
           )
         })}
