@@ -117,7 +117,7 @@
     transform: scale(1.2);
 }
 
-@media screen and (min-width: 1158px) {
+@media screen and (max-width: 1158px) {
     .imageContainer{
         display: block;
         display: none;
