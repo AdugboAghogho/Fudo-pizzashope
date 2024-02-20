@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import Cherry from '../assets/Cherry.png'
-import HeroImage from '../assets/HeroImage.png'
+import ww from '../assets/ww.png'
 import {UilPhone} from '@iconscout/react-unicons'
 import Pizza1 from '../assets/p1.jpg'
 import css from '../styles/Hero.module.css'
@@ -42,7 +42,7 @@ const Hero = () => {
       <div className={css.right}>
         <div className={css.imageContainer}>
           <Image 
-            src={HeroImage}
+            src={ww}
             alt='hero'
             layout='intrinsic'
             priority
