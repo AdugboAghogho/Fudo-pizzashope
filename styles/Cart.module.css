@@ -73,3 +73,17 @@
     background-color: var(--themeRed);
     color: #fff;
 }
+
+@media screen and (max-width: 830px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 553px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+}
