@@ -9,7 +9,7 @@ import arrowRight from '../../assets/arrowRight.png'
 export default function pizza ({ pizza }) {
   const src = urlFor(pizza.image).url()
 
-  const [Size, setSize] = useState(1)
+  const [size, setSize] = useState(1)
   const [Quantity, setQuantity] = useState(1)
 
   const handleQuan = (type) => {
@@ -38,13 +38,13 @@ export default function pizza ({ pizza }) {
                 <span >{pizza.name}</span>
                 <span>{pizza.details}</span>
 
-                <span> <span style={{ color: 'var(--themeRed)'}}>$</span> {pizza.price[Size]}</span>
+                <span> <span style={{ color: 'var(--themeRed)'}}>$</span> {pizza.price[size]}</span>
                 <div className={css.size}>
                     <span>Size</span>
                     <div className={css.sizeVaraints}>
-                        <div className={Size === 0 ? css.selected : ''} onClick={() => setSize(0)}>Small</div>
-                        <div className={Size === 1 ? css.selected : ''} onClick={() => setSize(1)}>Medium</div>
-                        <div className={Size === 2 ? css.selected : ''} onClick={() => setSize(2)}>Large</div>
+                        <div className={size === 0 ? css.selected : ''} onClick={() => setSize(0)}>Small</div>
+                        <div className={size === 1 ? css.selected : ''} onClick={() => setSize(1)}>Medium</div>
+                        <div className={size === 2 ? css.selected : ''} onClick={() => setSize(2)}>Large</div>
                     </div>
                 </div>
 
