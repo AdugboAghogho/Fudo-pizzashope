@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const Menu = ({ pizzas }) => {
   return (
-    <div className={css.container} id='menu'>
+    <div className={css.container}key='menu'>
       <div className={css.heading}>
         <span>OUR MENU</span>
         <span>Menu That Always</span>
@@ -20,7 +20,7 @@ const Menu = ({ pizzas }) => {
           return (
             <Link href={`./pizza/${pizza.slug.current}`}>
               <div className={css.bg}>
-                <div className={css.pizza} key={pizza.id}>
+                <div className={css.pizza} key={pizza.key}>
 
                   <div className={css.ImageWrapper}>
                     <Image 
