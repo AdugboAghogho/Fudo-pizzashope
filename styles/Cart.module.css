@@ -11,7 +11,7 @@
     width: 100%;
     border-collapse: separate;
     border-spacing: 1rem;
-    background: rgba(0, 139, 53, 0.733)0, 139, 0.432;
+    background: rgba(0, 0, 139, 0.432);
 }
 
 .tbody>tr>td{
@@ -86,5 +86,9 @@
     .container{
         display: flex;
         flex-direction: column;
+    }
+
+    .table{
+        width: 50%;
     }
 }
