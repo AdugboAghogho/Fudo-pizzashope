@@ -2,10 +2,16 @@ import React, { useState } from 'react';
 import css from '../styles/Header.module.css';
 import Image from 'next/image';
 import Logo from '../assets/Logo.png';
-import { UilShoppingBag, UilHamburgerMenu, UilOutlineRestaurantMenu } from '@iconscout/react-unicons';
+import { UilShoppingBag } from '@iconscout/react-unicons';
+import { useStore } from '../store/store';
+import Link from 'next/link';
 
 const Header = () => {
-  const [toggle, setToggle] = useState(false);
+  // state in terminal
+  const state = useStore((state) => state)
+  console.log(state)
+
+  const items = useStore((state) => state.cart.pizzas.length)
 
   return (
     <div className={css.header}>
@@ -21,32 +27,20 @@ const Header = () => {
       </div>
 
       <ul className={css.menu}>
-        <li><a href="#home">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="#menu">Menu</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="/">Contact</a></li>
       </ul>
 
       <div className={css.rightSide}>
-        <div className={css.cart}>
-          <UilShoppingBag size={35} color='#2E2E2E' />
-          <div className={css.badge}>1</div>
-        </div>
+        <Link href="/cart">
+          <div className={css.cart}>
+            <UilShoppingBag size={35} color='#2E2E2E' />
+            <div className={css.badge}>{items}</div>
+          </div>
+        </Link>
       </div>
 
-      {/* <div className={css.app__navbarsmallscreen}>
-        <UilHamburgerMenu color="#fff" fontSize={27} onClick={() => setToggle(true)} />
-
-        {toggle && (
-          <div className={`css.app__navbarsmallscreen_overlay ${flex__center}slide-bottom`}>
-            <UilOutlineRestaurantMenu fontSize={27} className={css.overlay__close} onClick={() => setToggle(false)} />
-            <ul className="app__navbarsmallscreen_links">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#menu">Menu</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-        )}
-      </div> */}
     </div>
   );
 };

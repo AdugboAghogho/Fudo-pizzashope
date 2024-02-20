@@ -96,6 +96,21 @@
     cursor: pointer;
 }
 
+.button{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.button>:nth-child(2) {
+    background-color: transparent;
+    border: 2px solid var(--themeRed);
+    color: var(--themeRed);
+}
+.button>:nth-child(2):hover{
+    background-color: var(--themeRed);
+    color: #fff;
+}
+
 
 @media screen and (max-width: 800px) {
     .container{

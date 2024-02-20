@@ -5,11 +5,13 @@ import Image from 'next/image';
 import css from '../../styles/Pizza.module.css'
 import arrowLeft from '../../assets/arrowLeft.png'
 import arrowRight from '../../assets/arrowRight.png'
+import { useStore } from '../../store/store';
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function Pizza ({ pizza }) {
   const src = urlFor(pizza.image).url()
 
-  const [size, setSize] = useState(1)
+  const [Size, setSize] = useState(1)
   const [Quantity, setQuantity] = useState(1)
 
   const handleQuan = (type) => {
@@ -19,6 +21,13 @@ export default function Pizza ({ pizza }) {
     ? null 
     : setQuantity ((prev) => prev -1)
   }
+
+  //ADD TO CART FUNCTION//
+  const addPizza = useStore((state) => state.addPizza)
+  const addToCart = () => {
+    addPizza({...pizza, price: pizza.price[Size], quantity: Quantity, size: Size})
+    toast.success("Pizza Added To Cart")
+  } 
 
   return (
     <Layout>
@@ -32,19 +41,19 @@ export default function Pizza ({ pizza }) {
                 unoptimized
                 objectFit='cover '
                 />
-            </div>
+            </div> 
 
             <div className={css.right}>
                 <span >{pizza.name}</span>
                 <span>{pizza.details}</span>
 
-                <span> <span style={{ color: 'var(--themeRed)'}}>$</span> {pizza.price[size]}</span>
+                <span> <span style={{ color: 'var(--themeRed)'}}>$</span> {pizza.price[Size]}</span>
                 <div className={css.size}>
                     <span>Size</span>
                     <div className={css.sizeVaraints}>
-                        <div className={size === 0 ? css.selected : ''} onClick={() => setSize(0)}>Small</div>
-                        <div className={size === 1 ? css.selected : ''} onClick={() => setSize(1)}>Medium</div>
-                        <div className={size === 2 ? css.selected : ''} onClick={() => setSize(2)}>Large</div>
+                        <div className={Size === 0 ? css.selected : ''} onClick={() => setSize(0)}>Small</div>
+                        <div className={Size === 1 ? css.selected : ''} onClick={() => setSize(1)}>Medium</div>
+                        <div className={Size === 2 ? css.selected : ''} onClick={() => setSize(2)}>Large</div>
                     </div>
                 </div>
 
@@ -74,10 +83,16 @@ export default function Pizza ({ pizza }) {
                     </div>
                 </div>
 
-                <div className={`btn ${css.btn}`}>
-                    Add To Cart
+                <div className={css.button}>
+                    <div className={`btn ${css.btn}`} onClick={addToCart}>
+                        Add To Cart
+                    </div>
+                    <div className={`btn ${css.btn}`} onClick={addToCart}>
+                        Go To Cart
+                    </div>  
                 </div>
             </div>
+            <Toaster />
        </div>
 
     </Layout>
