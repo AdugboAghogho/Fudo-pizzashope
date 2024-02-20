@@ -6,7 +6,7 @@ import css from '../../styles/Pizza.module.css'
 import arrowLeft from '../../assets/arrowLeft.png'
 import arrowRight from '../../assets/arrowRight.png'
 
-export default function pizza ({ pizza }) {
+export default function Pizza ({ pizza }) {
   const src = urlFor(pizza.image).url()
 
   const [size, setSize] = useState(1)
