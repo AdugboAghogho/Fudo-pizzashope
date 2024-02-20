@@ -4,7 +4,7 @@ const nextConfig = {
 
   javascript: {
     ignoreBuildErrors: true,
-}
+  }
 
 }
 

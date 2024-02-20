@@ -1,5 +1,6 @@
 .heading{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     font-weight: bold;
     justify-content: center;
