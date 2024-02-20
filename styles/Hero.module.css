@@ -117,10 +117,30 @@
     transform: scale(1.2);
 }
 
-@media screen and (max-width: 375px) {
-    .container {
+@media screen and (max-width: 1150px) {
+    .container{
       flex-direction: column;
     }
+  
+    .Pizza {
+      margin: 5rem 0 0 0;
+    }
+
+    .pz{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  
+    .Pizza> Image {
+      width: 100%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    /* .container {
+      flex-direction: column;
+    } */
   
     .imageContainer {
       margin: 5rem 0 0 0;
