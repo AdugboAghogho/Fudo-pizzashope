@@ -20,7 +20,7 @@ const Menu = ({ pizzas }) => {
           return (
             <Link href={`./pizza/${pizza.slug.current}`}>
               <div className={css.bg}>
-                <div className={css.pizza} key={id}>
+                <div className={css.pizza} key={pizza.slug.current}>
 
                   <div className={css.ImageWrapper}>
                     <Image 
