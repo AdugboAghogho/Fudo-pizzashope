@@ -95,3 +95,26 @@
     transform: scale(1.2);
     cursor: pointer;
 }
+
+
+@media screen and (max-width: 800px) {
+    .container{
+        flex-direction: column;
+        height: 70rem;
+    }
+
+    .imageWrapper{
+        width: 100%;
+        height: 100%;
+    }
+
+    .right>:nth-child(2), .right>:nth-child(3){
+        margin-top: .9rem;
+    }
+
+    .size, .quantity{
+        margin-top: .9rem;
+        margin-bottom: .9rem;
+        flex-direction: column;
+    }
+}
