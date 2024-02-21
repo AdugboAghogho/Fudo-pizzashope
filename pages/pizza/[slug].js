@@ -7,6 +7,7 @@ import arrowLeft from '../../assets/arrowLeft.png'
 import arrowRight from '../../assets/arrowRight.png'
 import { useStore } from '../../store/store';
 import toast, { Toaster } from 'react-hot-toast';
+import { Link } from 'next/link';
 
 export default function Pizza ({ pizza }) {
   const src = urlFor(pizza.image).url()
@@ -87,9 +88,11 @@ export default function Pizza ({ pizza }) {
                     <div className={`btn ${css.btn}`} onClick={addToCart}>
                         Add To Cart
                     </div>
-                    <div className={`btn ${css.btn}`}>
-                       <a href='/'>Go To Cart</a>
-                    </div>  
+                    <Link href='/cart'>
+                        <div className={`btn ${css.btn}`}>
+                            Go To Cart
+                        </div>  
+                    </Link>
                 </div>
             </div>
             <Toaster />
