@@ -22,6 +22,10 @@
     width: 15%;
 }
 
+.tr:hover{
+    box-shadow: var(--shadow);
+}
+
 .imageTd>span>img{
     border-radius: 1rem;
 }
@@ -89,6 +93,6 @@
     }
 
     .table{
-        width: 50%;
+        width: 20%;
     }
 }
