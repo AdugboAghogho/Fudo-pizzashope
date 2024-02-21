@@ -1,26 +1,26 @@
 import create from 'zustand';
-import cart from './../pages/cart';
+import Cart from './../pages/cart';
 
 export const useStore = create (
     (set) => ({
         // CART
-        cart : {
+        Cart : {
             pizzas : []
         },
 
         // ADD PIZZA IN CART
         addPizza : (data) => 
         set ((state) => ({
-            cart: {
-                pizzas: [...state.cart.pizzas, data]
+            Cart: {
+                pizzas: [...state.Cart.pizzas, data]
             }
         })),
 
         // REMOVE PIZZA
         removePizza : (index) => 
         set((state) => ({
-            cart : {
-                pizzas : state.cart.pizzas.filter((_, i) => i !=index)
+            Cart : {
+                pizzas : state.Cart.pizzas.filter((_, i) => i !=index)
             }
         }))
     })
