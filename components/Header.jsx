@@ -27,9 +27,9 @@ const Header = () => {
       </div>
 
       <ul className={css.menu}>
-        <li><a href="/">Home</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="/">Contact</a></li>
+        <li><Link href="/">Home</Link></li>
+        <li><Link href="#menu">Menu</Link></li>
+        <li><Link href="/">Contact</Link></li>
       </ul>
 
       <div className={css.rightSide}>
