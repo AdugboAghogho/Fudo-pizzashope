@@ -84,18 +84,13 @@
 }
 
 @media screen and (max-width: 553px) {
-    .container{
-        display: flex;
-        flex-direction: column;
-    }
-
     .table{
-        width: 20%;
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     .imageTd{
-        width: 50%;
+        width: 100%;
     }
 }
