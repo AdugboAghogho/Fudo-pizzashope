@@ -11,7 +11,7 @@
     width: 100%;
     border-collapse: separate;
     border-spacing: 1rem;
-    background: rgba(0, 0, 139, 0.432);
+    /* background: rgba(0, 0, 139, 0.432); */
 }
 
 .tbody>tr>td{
@@ -22,8 +22,13 @@
     width: 15%;
 }
 
+.tr{
+    background: var(--cartBack);
+}
+
 .tr:hover{
     box-shadow: var(--shadow);
+    cursor: pointer;
 }
 
 .imageTd>span>img{
@@ -94,6 +99,7 @@
 
     .table{
         width: 20%;
-        df
+        display: flex;
+        flex-wrap: wrap;
     }
 }
