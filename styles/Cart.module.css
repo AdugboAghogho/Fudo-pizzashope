@@ -22,14 +22,6 @@
     width: 15%;
 }
 
-.tr{
-    background: var(--cartBack);
-}
-
-.tr:hover{
-    box-shadow: var(--shadow);
-    cursor: pointer;
-}
 
 .imageTd>span>img{
     border-radius: 1rem;
