@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { useStore } from './../store/store';
 import toast, { Toaster } from 'react-hot-toast'
 
-const cart = () => {
+const Cart = () => {
   const CartData = useStore((state) => state.cart) 
   const removePizza = useStore((state) => state.removePizza) 
 
@@ -111,4 +111,4 @@ const cart = () => {
   )
 }
 
-export default cart
+export default Cart
