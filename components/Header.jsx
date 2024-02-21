@@ -27,9 +27,11 @@ const Header = () => {
       </div>
 
       <ul className={css.menu}>
-        <li><Link href="/">Home</Link></li>
-        <li><Link href="#menu">Menu</Link></li>
-        <li><Link href="/">Contact</Link></li>
+        <Link href='/'>
+          <li>Home</li>
+        </Link>
+        <li>Menu</li>
+        <li>Contact</li>
       </ul>
 
       <div className={css.rightSide}>
