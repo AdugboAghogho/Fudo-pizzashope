@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import Layout from './../../components/Layout';
 import { client, urlFor } from '../../components/lib/client';
 import Image from 'next/image';
-import css from '../../styles/Pizza.module.css'
-import arrowLeft from '../../assets/arrowLeft.png'
-import arrowRight from '../../assets/arrowRight.png'
+import css from '../../styles/Pizza.module.css';
+import arrowLeft from '../../assets/arrowLeft.png';
+import arrowRight from '../../assets/arrowRight.png';
 import { useStore } from '../../store/store';
 import toast, { Toaster } from 'react-hot-toast';
 import { Link } from 'next/link';
@@ -90,7 +90,7 @@ export default function Pizza ({ pizza }) {
                     </div>
                     <Link>
                     <div className={`btn ${css.btn}`}>
-                        <a href='/'>Go To Cart</a>
+                        Go To Cart
                     </div>  
                     </Link>
                 </div>
