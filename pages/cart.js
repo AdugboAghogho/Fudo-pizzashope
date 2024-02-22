@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Layout from '../components/Layout'
 import css from '../styles/Cart.module.css'
 import { urlFor } from '../components/lib/client'
