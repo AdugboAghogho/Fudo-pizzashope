@@ -40,7 +40,7 @@ export default function Pizza ({ pizza }) {
                 src={src}
                 layout='fill'
                 unoptimized
-                objectFit='cover '
+                objectFit='cover'
                 />
             </div> 
 

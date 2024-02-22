@@ -86,8 +86,6 @@
 @media screen and (max-width: 553px) {
     .table{
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
     }
 
     .imageTd{
