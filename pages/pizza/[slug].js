@@ -88,10 +88,10 @@ export default function Pizza ({ pizza }) {
                     <div className={`btn ${css.btn}`} onClick={addToCart}>
                         Add To Cart
                     </div>
-                    <Link>
-                    <div className={`btn ${css.btn}`}>
-                        Go To Cart
-                    </div>  
+                    <Link href='/cart'>
+                        <div className={`btn ${css.btn}`}>
+                            Go To Cart
+                        </div>  
                     </Link>
                 </div>
             </div>
