@@ -1,11 +1,13 @@
+import React from 'react';
 import { useDisclosure } from '@mantine/hooks';
 import { Modal, Button } from '@mantine/core';
 
-export default (params) => {
- const [opened, { open, close }] = useDisclosure(false);
+function Demo({Open}) {
+  const [opened, { open, close }] = useDisclosure(false);
 
   return (
-    <Modal
+    <>
+      <Modal
         opened={opened}
         onClose={close}
         title="Authentication"
@@ -14,9 +16,12 @@ export default (params) => {
           blur: 3,
         }}
       >
-        hxhjgjhkl
+        {/* Modal content */}
       </Modal>
+      <Button onClick={open}>Open modal</Button>
 
-    //   <Button onClick={open}>Open modal</Button>
-  )
+    </>
+  );
 }
+
+export default Demo;

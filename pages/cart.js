@@ -119,7 +119,7 @@ const Cart = () => {
       {/* //MODAL */}
 
       <OrderModal
-        opened ={PaymentMethod === 0}
+        Open ={PaymentMethod === 0}
       />
     </Layout>
   )
