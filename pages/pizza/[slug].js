@@ -12,7 +12,7 @@ import { Link } from 'next/link';
 export default function Pizza ({ pizza }) {
   const src = urlFor(pizza.image).url()
 
-  const [Size, setSize] = useState(1)
+  const [size, setSize] = useState(1)
   const [Quantity, setQuantity] = useState(1)
 
   const handleQuan = (type) => {
@@ -26,7 +26,7 @@ export default function Pizza ({ pizza }) {
   //ADD TO CART FUNCTION//
   const addPizza = useStore((state) => state.addPizza)
   const addToCart = () => {
-    addPizza({...pizza, price: pizza.price[Size], quantity: Quantity, size: Size})
+    addPizza({...pizza, price: pizza.price[size], quantity: Quantity, size: size})
     toast.success("Pizza Added To Cart")
   } 
 
@@ -48,13 +48,13 @@ export default function Pizza ({ pizza }) {
                 <span >{pizza.name}</span>
                 <span>{pizza.details}</span>
 
-                <span> <span style={{ color: 'var(--themeRed)'}}>$</span> {pizza.price[Size]}</span>
+                <span> <span style={{ color: 'var(--themeRed)'}}>$</span> {pizza.price[size]}</span>
                 <div className={css.size}>
                     <span>Size</span>
                     <div className={css.sizeVaraints}>
-                        <div className={Size === 0 ? css.selected : ''} onClick={() => setSize(0)}>Small</div>
-                        <div className={Size === 1 ? css.selected : ''} onClick={() => setSize(1)}>Medium</div>
-                        <div className={Size === 2 ? css.selected : ''} onClick={() => setSize(2)}>Large</div>
+                        <div className={size === 0 ? css.selected : ''} onClick={() => setSize(0)}>Small</div>
+                        <div className={size === 1 ? css.selected : ''} onClick={() => setSize(1)}>Medium</div>
+                        <div className={size === 2 ? css.selected : ''} onClick={() => setSize(2)}>Large</div>
                     </div>
                 </div>
 
@@ -109,9 +109,9 @@ export async function getStaticPaths() {
 
     return {
         paths: paths.map((slug) => ({params: {slug} })),
-        fallback: 'blocking'
+        fallback: 'blocking',
     }
-}
+} 
 
 
 export async function getStaticProps(context) {
