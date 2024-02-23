@@ -117,9 +117,10 @@ const Cart = () => {
       <Toaster />
 
       {/* //MODAL */}
-
       <OrderModal
-        Open ={PaymentMethod === 0}
+        opened ={PaymentMethod === 0}
+        setOpened = {setPaymentMethod}
+        PaymentMethod = {PaymentMethod}
       />
     </Layout>
   )

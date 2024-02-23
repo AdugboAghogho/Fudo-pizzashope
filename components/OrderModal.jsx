@@ -1,27 +1,17 @@
-import React from 'react';
-import { useDisclosure } from '@mantine/hooks';
-import { Modal, Button } from '@mantine/core';
+import { Modal, useMantineTheme } from '@mantine/core';
 
-function Demo({Open}) {
-  const [opened, { open, close }] = useDisclosure(false);
+export default ({opened, setOpened, PaymentMethod}) => {
+  const theme = useMantineTheme();
 
-  return (
-    <>
-      <Modal
-        opened={opened}
-        onClose={close}
-        title="Authentication"
-        overlayProps={{
-          backgroundOpacity: 0.55,
-          blur: 3,
-        }}
-      >
-        {/* Modal content */}
-      </Modal>
-      <Button onClick={open}>Open modal</Button>
-
-    </>
-  );
-}
-
-export default Demo;
+  return(
+    <Modal
+      overlayColor={theme.colorScheme === 'dark' ? theme.colors.dark[9] : theme.colors.gray[2]}
+      overlayOpacity={0.55}
+      overlayBlur={3}
+      opened = {opened}
+      onClose={() => setOpened(null)}
+    >
+        Kelvin
+    </Modal>
+  )
+};
