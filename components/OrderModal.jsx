@@ -1,7 +1,10 @@
 import { Modal, useMantineTheme } from '@mantine/core';
+import css from '.././styles/OrderModal.module.css'
 
 export default ({opened, setOpened, PaymentMethod}) => {
   const theme = useMantineTheme();
+
+  const total = typeof window !== 'undefined' && localStorage.getItem('total')
 
   return(
     <Modal
@@ -11,7 +14,17 @@ export default ({opened, setOpened, PaymentMethod}) => {
       opened = {opened}
       onClose={() => setOpened(null)}
     >
-        Kelvin
+        <form action="" className={css.formContainer}>
+            <input type="text"  name='name' required placeholder='Name' />
+            <input type="text"  name='phone' required placeholder='Phone Number' />
+            <textarea name="address" id="" cols="8" rows="3"></textarea>
+
+            <span>
+                You Will Pay <span>$ {total}</span> On Delivery
+            </span>
+
+            <button type='submit'className='btn'>Place Order</button>
+        </form>
     </Modal>
   )
-};
+}; 
