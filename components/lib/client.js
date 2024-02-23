@@ -1,7 +1,7 @@
 import SanityClient, { createClient } from "@sanity/client";
 import ImageUrlBuilder from "@sanity/image-url";
 
-export const createClient = SanityClient({
+export const client = SanityClient({
     projectId: '2umrtm2g',
     dataset: 'production',
     apiVersion: '2024-02-16',
@@ -9,6 +9,6 @@ export const createClient = SanityClient({
     token: 'skHBeayrOaRAhpawcsaY01cKqnBdHiKeCHULQ8fR8lih9tVkqjbcHSQiZ1fgt8HGIzzcvw2FsdltqvM8OvE7aVNhLMjawCKFy0bxBD1a2juC4t2MPbjU7MTu3cCwJbs5uTlr2vFpJ621VSQZEopdC1mitbD7MtG12mDpSuJ7kTKDRC7uELsN'
 })
 
-const builder = ImageUrlBuilder(createClient)
+const builder = ImageUrlBuilder(client)
 
 export const urlFor = (source) => builder.image(source)
