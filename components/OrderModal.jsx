@@ -1,6 +1,7 @@
 import { Modal, useMantineTheme } from '@mantine/core';
 import css from '.././styles/OrderModal.module.css'
 import { useState } from 'react';
+import { createOrder } from './lib/orderHandler';
 
 export default ({opened, setOpened, PaymentMethod}) => {
     const theme = useMantineTheme();
@@ -13,9 +14,10 @@ export default ({opened, setOpened, PaymentMethod}) => {
 
   const total = typeof window !== 'undefined' && localStorage.getItem('total')
 
-  const handleSubmit = (e) => {
+  const handleSubmit =  async(e) => {
     e.preventDefault();
-    console.log(FormdData)
+    const id = await createOrder({...FormdData, total, PaymentMethod})
+    console.log('Order placed, id')
   }
 
   return(

@@ -7,10 +7,6 @@ import { useStore } from '../store/store';
 import Link from 'next/link';
 
 const Header = () => {
-  // state in terminal
-  const state = useStore((state) => state)
-  console.log(state)
-
   const items = useStore((state) => state.cart.pizzas.length)
 
   return (
