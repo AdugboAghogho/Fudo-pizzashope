@@ -17,7 +17,7 @@ export default ({opened, setOpened, PaymentMethod}) => {
         <form action="" className={css.formContainer}>
             <input type="text"  name='name' required placeholder='Name' />
             <input type="text"  name='phone' required placeholder='Phone Number' />
-            <textarea name="address" id="" cols="8" rows="3"></textarea>
+            <textarea name="address" id="" cols="8" rows="3" required placeholder='Name'></textarea>
 
             <span>
                 You Will Pay <span>$ {total}</span> On Delivery

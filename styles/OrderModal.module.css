@@ -14,3 +14,14 @@
     border-radius: .4rem;
 }
 
+.formContainer>span>span{
+    font-weight: bold;
+    color: var(--themeRed);
+    font-size: 1.3rem;
+}
+
+.formContainer>button{
+    padding: 0.9rem;
+    font-style: 1rem;
+    background-color: rgb(59, 208, 59);
+}
