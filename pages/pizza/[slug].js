@@ -1,6 +1,6 @@
 import  { useState } from 'react';
 import Layout from './../../components/Layout';
-import { createClient, urlFor } from '../../components/lib/client';
+import { client, createClient, urlFor } from '../../components/lib/client';
 import Image from 'next/image';
 import css from '../../styles/Pizza.module.css';
 import arrowLeft from '../../assets/arrowLeft.png';
@@ -10,6 +10,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { Link } from 'next/link';
 
 export default function Pizza ({ pizza }) {
+  const { client } = useStore(); 
   const src = urlFor(pizza.image).url()
 
   const [Size, setSize] = useState(1)
@@ -116,7 +117,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
     const { slug = ""} = context.params;
-    const pizza = await createClient.fetch(
+    const pizza = await client.fetch(
         `*[_type=="pizza" && slug.current == '${slug}'][0]`
     );
 
