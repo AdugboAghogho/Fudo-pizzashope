@@ -1,6 +1,6 @@
 import  { useState } from 'react';
 import Layout from './../../components/Layout';
-import { client, urlFor } from '../../components/lib/client';
+import { createClient, urlFor } from '../../components/lib/client';
 import Image from 'next/image';
 import css from '../../styles/Pizza.module.css';
 import arrowLeft from '../../assets/arrowLeft.png';
@@ -103,7 +103,7 @@ export default function Pizza ({ pizza }) {
 }
 
 export async function getStaticPaths() {
-    const paths = await client.fetch(
+    const paths = await createClient.fetch(
         `*[_type=="pizza" && defined(slug.current)][].slug.current`
     );
 
@@ -116,7 +116,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
     const { slug = ""} = context.params;
-    const pizza = await client.fetch(
+    const pizza = await createClient.fetch(
         `*[_type=="pizza" && slug.current == '${slug}'][0]`
     );
 
