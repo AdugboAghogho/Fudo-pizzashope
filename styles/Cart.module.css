@@ -84,9 +84,21 @@
 }
 
 @media screen and (max-width: 553px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    
     .table{
         display: flex;
+        flex-wrap: wrap;
     }
+
+    .table>tbody>Image {
+        width: 50%;
+    }
+        
+    
 
     .imageTd{
         width: 100%;

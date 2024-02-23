@@ -7,10 +7,11 @@ import arrowLeft from '../../assets/arrowLeft.png';
 import arrowRight from '../../assets/arrowRight.png';
 import { useStore } from '../../store/store';
 import toast, { Toaster } from 'react-hot-toast';
-import { Link } from 'next/link';
+import { useRouter } from 'next/router';
 
 export default function Pizza ({ pizza }) {
   const src = urlFor(pizza.image).url()
+  const router = useRouter();
 
   const [size, setSize] = useState(1)
   const [Quantity, setQuantity] = useState(1)
@@ -30,6 +31,12 @@ export default function Pizza ({ pizza }) {
     toast.success("Pizza Added To Cart")
   } 
 
+  const handleGoToCart = () => {
+    // Handle any additional logic before navigating to the cart, if needed
+    console.log('Going to cart...');
+    router.push('/cart');
+  };
+
   return (
     <Layout>
        <div className={css.container}>
@@ -40,6 +47,7 @@ export default function Pizza ({ pizza }) {
                 src={src}
                 layout='fill'
                 unoptimized
+                priority
                 objectFit='cover'
                 />
             </div> 
@@ -69,6 +77,7 @@ export default function Pizza ({ pizza }) {
                            width={20}
                            objectFit='contain'
                            onClick={() => handleQuan("dec")}
+                           priority
                         />
 
                         <span>{Quantity}</span>
@@ -80,19 +89,21 @@ export default function Pizza ({ pizza }) {
                            width={20}
                            objectFit='contain'
                            onClick={() => handleQuan("inc")}
+                           priority
                         />
                     </div>
                 </div>
 
                 <div className={css.button}>
+                    
                     <div className={`btn ${css.btn}`} onClick={addToCart}>
                         Add To Cart
                     </div>
-                    <Link href='/cart'>
-                        <div className={`btn ${css.btn}`}>
-                            Go To Cart
-                        </div>  
-                    </Link>
+                    
+                    <div className={`btn ${css.btn}`} onClick={handleGoToCart}>
+                        Go To Cart
+                    </div>  
+                    
                 </div>
             </div>
             <Toaster />
