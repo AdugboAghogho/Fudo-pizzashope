@@ -29,6 +29,7 @@ const Menu = ({ pizzas }) => {
                     alt='pizza'
                     objectFit='cover'
                     layout='fill'
+                    priority
                     />
                   </div>
 
