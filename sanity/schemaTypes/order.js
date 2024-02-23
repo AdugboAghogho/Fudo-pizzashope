@@ -37,5 +37,10 @@ export default {
             title: 'Status',
             type: 'number',
         },
+        {
+            name: 'method',
+            title: 'Method',
+            type: 'number',
+        },
     ]
 }
