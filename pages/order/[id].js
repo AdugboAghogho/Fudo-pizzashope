@@ -1,19 +1,20 @@
 import { client } from "../../components/lib/client"
 import Layout from './../../components/Layout';
 import css from '../../styles/order.module.css'
+import {UilBill }from '@iconscout/react-unicons'
 
-export const getServerSideProps = async ( {params}) => {
+export const getServerSideProps = async ({ params }) => {
     const query = `*[_type == 'order' && _id == '${params.id}']`;
     const order = await client.fetch(query);
 
     return{
         props: {
-            order : order[0]
-        }
-    }
-}
+            order : order[0],
+        },
+    };
+};
 
-export default function ({order}) {
+export default function Orders({order}) {
 
     return(
         <Layout>
@@ -49,16 +50,17 @@ export default function ({order}) {
                </div>
             
 
-            <div className={css.statusConatiner}>
-                <div className={css.status}>
-                    <UilBill width={50} height={50}/>
-                    <span>Payment</span>
-                    {order.method === 0 ?
-                       <span className={css.pending}>On Delivery</span> :
-                       <span className={css.pending}>Completed</span> 
-                    }
-                </div> 
-            </div>
+                <div className={css.statusConatiner}>
+                    <div className={css.status}>
+                        <UilBill width={50} height={50}/>
+                        <span>Payment</span>
+                        {order.method === 0 ? (
+                          <span className={css.pending}>On Delivery</span> 
+                        ) : (
+                          <span className={css.completed}>Completed</span> 
+                        )}
+                    </div> 
+                </div>
             </div>
         </Layout>
     )
