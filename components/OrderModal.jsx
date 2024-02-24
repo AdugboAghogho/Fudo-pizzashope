@@ -4,9 +4,11 @@ import { useState } from 'react';
 import { createOrder } from './lib/orderHandler';
 import toast, { Toaster } from 'react-hot-toast';
 import { useStore } from '../store/store';
+import { useRouter } from 'next/router';
 
 export default ({opened, setOpened, PaymentMethod}) => {
     const theme = useMantineTheme();
+    const router = useRouter();
     const [FormdData, setFormData] = useState({})  
 
 
@@ -26,6 +28,8 @@ export default ({opened, setOpened, PaymentMethod}) => {
         {
             typeof window !== 'undefined' && localStorage.setItem('order', id)
         }
+
+        router.push(`/order/${id}`)
     }
 
   return(
