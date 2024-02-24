@@ -13,13 +13,13 @@ export default ({opened, setOpened, PaymentMethod}) => {
         setFormData({...FormdData, [e.target.name]: e.target.value})
     }
 
-  const total = typeof window !== 'undefined' && localStorage.getItem('total')
+    const total = typeof window !== 'undefined' && localStorage.getItem('total')
 
-  const handleSubmit =  async(e) => {
-    e.preventDefault();
-    const id = await createOrder({...FormdData, total, PaymentMethod})
-    toast.success("Order Placed");
-  }
+    const handleSubmit =  async (e) => {
+        e.preventDefault();
+        const id = await createOrder({...FormdData, total, PaymentMethod})
+        toast.success("Order Placed");
+    }
 
   return(
     <Modal
