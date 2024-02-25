@@ -44,3 +44,7 @@
     position: relative;
     align-items: center;
 }
+
+.status>*{
+    fill: var(--themeRed);
+}
