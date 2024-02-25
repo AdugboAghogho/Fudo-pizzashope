@@ -5,6 +5,8 @@
     margin-top: 3rem;
     align-items: center;
     justify-content: center;
+    background: var(--green);
+    border-radius: 3rem;
 }
 
 .heading{
