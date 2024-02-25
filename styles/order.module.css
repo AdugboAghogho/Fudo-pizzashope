@@ -28,14 +28,16 @@
     font-weight: 600;
 }
 
-.statusContainer{
+.statusConatainer{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 15rem;
 }
 
 .status{
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     gap: 2rem;
     width: 3rem;

@@ -54,7 +54,7 @@ export default function Orders({order}) {
                </div>
             
 
-                <div className={css.statusConatiner}>
+                <div className={css.statusConatainer}>
                     <div className={css.status}>
                         <UilBill width={50} height={50}/>
                         <span>Payment</span>
