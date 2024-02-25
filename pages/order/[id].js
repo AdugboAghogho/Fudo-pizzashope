@@ -4,6 +4,7 @@ import css from '../../styles/order.module.css'
 import {UilBill, UilBox} from '@iconscout/react-unicons'
 import Cooking from '../../assets/cooking.png'
 import Onway from '../../assets/onway.png'
+import Spinner from '../../assets/spinner.svg'
 import Image from "next/image";
 
 export const getServerSideProps = async ({ params }) => {
@@ -67,6 +68,12 @@ export default function Orders({order}) {
                     <div className={css.status}>
                         <Image src={Cooking} width={50} height={50}/>
                         <span>Cooking</span>
+
+                        {order.status === 1 && (
+                            <div className={css.spinner}>
+                                <Image src={Spinner} alt="spinner" />
+                            </div>
+                        )}
                     </div> 
 
                     <div className={css.status}>
