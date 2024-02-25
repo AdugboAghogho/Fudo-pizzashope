@@ -7,9 +7,12 @@
     justify-content: center;
     background: var(--green);
     border-radius: 3rem;
+    height: 60%;
+    
 }
 
 .heading{
+    margin-top: 3rem;
     font-size: 2rem;
     font-weight: 600;
 }
@@ -49,4 +52,20 @@
 
 .status>*{
     fill: var(--themeRed);
+}
+
+.spinner{
+    position: absolute;
+    left: -1.5rem;
+    top: -1.5rem;
+    width: 6rem;
+}
+
+.pending{
+    width: max-content;
+    background-color: orange;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    border-radius: 1rem;
+    color: #fff;
 }
