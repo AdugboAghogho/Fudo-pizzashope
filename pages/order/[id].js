@@ -78,12 +78,24 @@ export default function Orders({order}) {
 
                     <div className={css.status}>
                         <Image src={Onway} width={50} height={50}/>
-                        <span>On way</span>
+                        <span>OnWay</span>
+
+                        {order.status === 2 && (
+                            <div className={css.spinner}>
+                                <Image src={Spinner} alt="spinner" />
+                            </div>
+                        )}
                     </div> 
 
                     <div className={css.status}>
                         <UilBox width={50} height={50}/>
                         <span>Delivered</span>
+
+                        {order.status === 3 && (
+                            <div className={css.spinner}>
+                                <Image src={Spinner} alt="spinner" />
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
