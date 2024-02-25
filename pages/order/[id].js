@@ -3,7 +3,6 @@ import Layout from './../../components/Layout';
 import css from '../../styles/order.module.css'
 import {UilBill, UilBox} from '@iconscout/react-unicons'
 import Cooking from '../../assets/cooking.png'
-import Delivered from '../../assets/delivered.png'
 import Onway from '../../assets/onway.png'
 import Image from "next/image";
 
@@ -76,7 +75,7 @@ export default function Orders({order}) {
                     </div> 
 
                     <div className={css.status}>
-                        <Image src={Delivered} width={50} height={50}/>
+                        <UilBox width={50} height={50}/>
                         <span>Delivered</span>
                     </div>
                 </div>
