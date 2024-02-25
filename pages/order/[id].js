@@ -1,7 +1,11 @@
 import { client } from "../../components/lib/client"
 import Layout from './../../components/Layout';
 import css from '../../styles/order.module.css'
-import {UilBill} from '@iconscout/react-unicons'
+import {UilBill, UilBox} from '@iconscout/react-unicons'
+import Cooking from '../../assets/cooking.png'
+import Delivered from '../../assets/delivered.png'
+import Onway from '../../assets/onway.png'
+import Image from "next/image";
 
 export const getServerSideProps = async ({ params }) => {
     const query = `*[_type == 'order' && _id == '${params.id}']`;
@@ -60,9 +64,24 @@ export default function Orders({order}) {
                           <span className={css.completed}>Completed</span> 
                         )}
                     </div> 
+
+                    <div className={css.status}>
+                        <Image src={Cooking} width={50} height={50}/>
+                        <span>Cooking</span>
+                    </div> 
+
+                    <div className={css.status}>
+                        <Image src={Onway} width={50} height={50}/>
+                        <span>On way</span>
+                    </div> 
+
+                    <div className={css.status}>
+                        <Image src={Delivered} width={50} height={50}/>
+                        <span>Delivered</span>
+                    </div>
                 </div>
             </div>
-            
+
         </Layout>
     )
 }
