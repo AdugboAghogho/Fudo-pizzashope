@@ -30,6 +30,7 @@ const Menu = ({ pizzas }) => {
                     objectFit='cover'
                     layout='fill'
                     priority
+                    unoptimized
                     />
                   </div>
 

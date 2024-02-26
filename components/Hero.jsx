@@ -14,9 +14,10 @@ const Hero = () => {
           <span>More Than Faster</span>
           <Image 
             src={Cherry}
-            alt='cherrrgba(127, 218, 235, 0.986)'
+            alt='cherry'
             width={40}
             height={25}
+            unoptimized
           />
         </div>
 
@@ -46,6 +47,7 @@ const Hero = () => {
             alt='hero'
             layout='intrinsic'
             priority
+            unoptimized
           />
         </div>
 
