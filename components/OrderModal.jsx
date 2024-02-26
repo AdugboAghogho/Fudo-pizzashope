@@ -7,30 +7,30 @@ import { useStore } from '../store/store';
 import { useRouter } from 'next/router';
 
 export default function ({opened, setOpened, PaymentMethod})  {
-    const theme = useMantineTheme();
-    const router = useRouter();
-    const [FormdData, setFormData] = useState({})  
+  const theme = useMantineTheme();
+  const router = useRouter();
+  const [FormdData, setFormData] = useState({})  
 
 
-    const handleInput = (e) => {
-        setFormData({...FormdData, [e.target.name]: e.target.value})
+  const handleInput = (e) => {
+    setFormData({...FormdData, [e.target.name]: e.target.value})
+  }
+
+  const resetCart = useStore((state) => state.resetCart)
+
+  const total = typeof window !== 'undefined' && localStorage.getItem('total')
+
+  const handleSubmit =  async (e) => {
+    e.preventDefault();
+    const id = await createOrder({...FormdData, total, PaymentMethod})
+    toast.success("Order Placed");
+    resetCart();
+    {
+        typeof window !== 'undefined' && localStorage.setItem('order', id)
     }
 
-    const resetCart = useStore((state) => state.resetCart)
-
-    const total = typeof window !== 'undefined' && localStorage.getItem('total')
-
-    const handleSubmit =  async (e) => {
-        e.preventDefault();
-        const id = await createOrder({...FormdData, total, PaymentMethod})
-        toast.success("Order Placed");
-        resetCart();
-        {
-            typeof window !== 'undefined' && localStorage.setItem('order', id)
-        }
-
-        router.push(`/order/${id}`)
-    }
+    router.push(`/order/${id}`)
+  }
 
   return(
     <Modal
