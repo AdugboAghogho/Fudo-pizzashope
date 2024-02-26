@@ -25,7 +25,7 @@ export default async function handler(req, res) {
                             currency: 'usd',
                             product_data: {
                                 name: item.name,
-                                image: [newImage],
+                                images: [newImage],
                             },
                             unit_amount: item.price*100
                         },
@@ -40,13 +40,13 @@ export default async function handler(req, res) {
             };
 
             //CHECKOUT SESSION
-            const session = await stripe.checkout.session.create(params);
+            const session = await stripe.checkout.sessions.create(params);
             console.log(session)
             res.status(200).json(session)
         } 
 
         catch (error) {
-            res.status(500).json(err.message)
+            res.status(500).json(error.message)
         }
 
     } else {

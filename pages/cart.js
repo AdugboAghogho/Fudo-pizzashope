@@ -76,6 +76,7 @@ const Cart = () => {
                                       objectFit='cover'
                                       width={85}
                                       height={85}
+                                      unoptimized
                                     />
                                 </td>
 
