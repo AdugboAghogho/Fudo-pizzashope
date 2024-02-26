@@ -2,9 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
 
-  javascript: {
-    ignoreBuildErrors: true,
-  }
+  
 
 }
 
