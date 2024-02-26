@@ -72,7 +72,7 @@ export default function Orders({order}) {
                     </div> 
 
                     <div className={css.status}>
-                        <Image src={Cooking} width={50} height={50}/>
+                        <Image src={Cooking} alt="" width={50} height={50}/>
                         <span>Cooking</span>
 
                         {order.status === 1 && (
@@ -87,7 +87,7 @@ export default function Orders({order}) {
                     </div> 
 
                     <div className={css.status}>
-                        <Image src={Onway} width={50} height={50}/>
+                        <Image src={Onway} alt="" width={50} height={50}/>
                         <span>OnWay</span>
 
                         {order.status === 2 && (
