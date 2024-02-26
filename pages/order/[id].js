@@ -74,6 +74,10 @@ export default function Orders({order}) {
                                 <Image src={Spinner} alt="spinner" />
                             </div>
                         )}
+
+                        {order.status> 1 && (
+                            <span className={css.completed}>Completed</span>
+                        )}
                     </div> 
 
                     <div className={css.status}>
@@ -85,6 +89,10 @@ export default function Orders({order}) {
                                 <Image src={Spinner} alt="spinner" />
                             </div>
                         )}
+
+                        {order.status> 2 && (
+                            <span className={css.completed}>Completed</span>
+                        )}
                     </div> 
 
                     <div className={css.status}>
@@ -95,6 +103,10 @@ export default function Orders({order}) {
                             <div className={css.spinner}>
                                 <Image src={Spinner} alt="spinner" />
                             </div>
+                        )}
+
+                        {order.status> 3 && (
+                            <span className={css.completed}>Completed</span>
                         )}
                     </div>
                 </div>
