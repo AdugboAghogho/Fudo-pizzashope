@@ -84,3 +84,11 @@
         width: 50%;
     }
 }
+
+@media screen and (max-width: 494px) {
+    .details{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+}

@@ -55,7 +55,7 @@ export default function Orders({order}) {
                     </div>
                     <div>
                         <span>Total</span>
-                        <span>$ {order.total}</span>
+                        <span style={{ color: 'var(--themeRed)' }}>$ {order.total}</span>
                     </div>
                </div>
             
