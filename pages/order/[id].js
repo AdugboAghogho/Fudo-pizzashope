@@ -34,19 +34,19 @@ export default function Orders({order}) {
                 </span>
                <div className={css.details}>
                     <div>
-                        <span>Order ID</span>
+                        <span>Order ID:</span>
                         <span>{order._id}</span>
                     </div>
                     <div>
-                        <span>Customer Name</span>
+                        <span>Customer Name:</span>
                         <span>{order.name}</span>
                     </div>
                     <div>
-                        <span>Phone</span>
+                        <span>Phone:</span>
                         <span>{order.phone}</span>
                     </div>
                     <div>
-                        <span>Method</span>
+                        <span>Method:</span>
                         <span>
                             {
                                 order.method === 0 ? 'Cash On Delivery' : 'Online Payment(Paid)'
@@ -54,8 +54,8 @@ export default function Orders({order}) {
                         </span>
                     </div>
                     <div>
-                        <span>Total</span>
-                        <span style={{ color: 'var(--themeRed)' }}>$ {order.total}</span>
+                        <span>Total:</span>
+                        <span><span style={{ color: 'var(--themeRed)' }}>$</span> {order.total}</span>
                     </div>
                </div>
             
