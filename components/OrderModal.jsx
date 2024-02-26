@@ -6,7 +6,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { useStore } from '../store/store';
 import { useRouter } from 'next/router';
 
-export default ({opened, setOpened, PaymentMethod}) => {
+export default function ({opened, setOpened, PaymentMethod})  {
     const theme = useMantineTheme();
     const router = useRouter();
     const [FormdData, setFormData] = useState({})  
