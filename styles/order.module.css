@@ -36,7 +36,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 15rem;
+    gap: 10rem;
+    margin-top: 5rem;
 }
 
 .status{
@@ -85,8 +86,8 @@
     }
 }
 
-@media screen and (max-width: 494px) {
-    .details{
+@media screen and (max-width: px) {
+    .statusConatainer{
         display: flex;
         flex-direction: column;
         width: 50%;
