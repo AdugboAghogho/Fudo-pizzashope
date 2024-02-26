@@ -6,6 +6,7 @@ import Cooking from '../../assets/cooking.png'
 import Onway from '../../assets/onway.png'
 import Spinner from '../../assets/spinner.svg'
 import Image from "next/image";
+import { useEffect } from "react";
 
 export const getServerSideProps = async ({ params }) => {
     const query = `*[_type == 'order' && _id == '${params.id}']`;
@@ -19,6 +20,11 @@ export const getServerSideProps = async ({ params }) => {
 };
 
 export default function Orders({order}) {
+    useEffect(() => {
+        if(order.status>3){
+            localStorage.clear();
+        }
+    }, [])
 
     return(
         <Layout>
