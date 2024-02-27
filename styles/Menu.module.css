@@ -35,7 +35,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    background: #82c2fd;
+    background: var(--green);
     border-radius: 2rem 1rem;
     box-shadow: var(--shadow);
     width: 20rem;
