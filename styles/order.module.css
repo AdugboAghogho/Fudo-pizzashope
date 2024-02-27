@@ -5,7 +5,8 @@
     margin-top: 3rem;
     align-items: center;
     justify-content: center;
-    
+    background: var(--green);
+    border-radius: 3rem;
 }
 
 .heading{
@@ -86,10 +87,8 @@
     }
 }
 
-@media screen and (max-width: px) {
+@media screen and (max-width: 543px) {
     .statusConatainer{
-        display: flex;
-        flex-direction: column;
-        width: 50%;
+        padding: 5rem;
     }
 }
