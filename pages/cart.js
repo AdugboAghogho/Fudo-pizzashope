@@ -129,10 +129,12 @@ const Cart = () => {
                 </div>
             </div>
 
-            <div className={css.button}>
-                <button className='btn' onClick={handleOnDelivery}>Pay on Delivery</button>
-                <button className='btn' onClick={handleOnCheckout}>Pay Now</button>
-            </div>
+            {!Order && CartData.pizzas.length > 0 ? (
+              <div className={css.button}>
+                  <button className='btn' onClick={handleOnDelivery}>Pay on Delivery</button>
+                  <button className='btn' onClick={handleOnCheckout}>Pay Now</button>
+              </div>
+            ) : null}
         </div>
       </div>
 
