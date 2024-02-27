@@ -1,4 +1,4 @@
-
+import React from 'react'
 import Layout from '../components/Layout'
 import css from '../styles/Cart.module.css'
 import { urlFor } from '../components/lib/client'
@@ -31,7 +31,7 @@ const Cart = () => {
   const handleOnCheckout = async () => {
     typeof window !== 'undefined' && localStorage.setItem('total', total())
     setPaymentMethod(1);
-    const response = await fetch('/api/stripe', {
+    const response = await fetch ('/api/stripe' , {
         method: "POST",
         headers: {
             'Content-Type': "application/json",
