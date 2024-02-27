@@ -13,6 +13,9 @@ const Cart = () => {
   const CartData = useStore((state) => state.cart) 
   const removePizza = useStore((state) => state.removePizza) 
   const [PaymentMethod, setPaymentMethod] = useState(null)
+  const [Order, setOrder] = useState (
+    typeof window !== 'undefined' && localStorage.getItem('order')
+  )
 
   const handleRemove = (i) => {
     removePizza(i);
